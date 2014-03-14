@@ -33,3 +33,5 @@ end
 Filter = lambda do |array, &block|
   return array.select(&block)
 end
+
+#參考解答　http://tonytonyjan.net/2011/08/12/ruby-block-proc-lambda/
