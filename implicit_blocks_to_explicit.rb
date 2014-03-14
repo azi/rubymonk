@@ -14,12 +14,22 @@ end
 addition = lambda { |x,y| x + y }
 puts calculation2(5, 5, &addition)
 
+#----Questions-----
+
 def filter(array, block)
   p array.select { |n| block.call(n) }
-  return array.select { |n| block.call(n) }
-
-  #return array.select # Your code here
+  #return array.select { |n| block.call(n) }
 end
 
 addition = lambda { |n| n.even? }
 filter([1, 2, 3, 4], addition)
+
+#same as above , but why Q1
+def filter(array, block)
+  return array.select(&block)
+end
+
+# two & , why Q2
+Filter = lambda do |array, &block|
+  return array.select(&block)
+end
